@@ -14,6 +14,14 @@ O processo de avaliação da performance da aplicação M9S7-Ponderada2 foi real
 - **Execução do teste:** Rodar o script de teste utilizando o k6 para simular a carga na aplicação e coletar métricas de desempenho.
 - **Análise dos resultados:** Analisar as métricas de desempenho coletadas durante o teste para identificar possíveis gargalos na aplicação e áreas de melhoria.
 
+## Conceitos aprendidos
+Durante o processo de avaliação, adquiri conhecimento sobre os Virtual Users, que são representações virtuais de usuários reais, simulando interações com a aplicação durante os testes de carga. Cada Virtual User executa o script de teste de forma autônoma, contribuindo para a geração de tráfego simulado na aplicação. No contexto da avaliação de desempenho, as solicitações HTTP são encaminhadas aos endpoints da aplicação para análise de métricas como tempo de resposta, taxa de sucesso e outros parâmetros relacionados ao desempenho.
+
+Além disso, compreendi o papel fundamental dos Scripts de Teste, que consistem em conjuntos de instruções e comandos que definem o comportamento dos Virtual Users durante os testes de carga. Esses scripts podem incluir a configuração de payloads, headers, solicitações HTTP e verificações de resposta, proporcionando uma avaliação abrangente do desempenho da aplicação.
+
+Por fim, explorei a importância das métricas de performance, que representam dados quantitativos essenciais para compreender o desempenho da aplicação durante os testes de carga. Essas métricas englobam informações como tempo de resposta das solicitações, taxa de solicitações por segundo, taxa de erro, entre outros, fornecendo insights valiosos para a otimização e o aprimoramento contínuo da aplicação.
+
+
 ## Explicação do código de teste
 ![alt text](image-11.png)
 
@@ -24,7 +32,7 @@ O processo de avaliação da performance da aplicação M9S7-Ponderada2 foi real
 - **import { check } from 'k6';:** Importa a função check do k6, que é usada para validar as respostas HTTP recebidas durante o teste.
 - **import { sleep } from 'k6';:** Importa a função sleep do k6, que é usada para adicionar atrasos entre as solicitações durante o teste.
 
-**2. Configuração de Opções:**
+**2. Configuração de opções:**
 - **options:** Define as opções de execução do teste, como o número de Virtual Users (VUs), a quantidade de iterações por VU e a duração total do teste. Neste caso, está configurado para simular 10 VUs, cada um realizando 100 iterações durante 10 segundos.
 
 **3. Função de teste:**
@@ -34,7 +42,7 @@ O processo de avaliação da performance da aplicação M9S7-Ponderada2 foi real
 **4. Solicitação HTTP:**
 
 - **const url** = 'http://localhost:3001/health-check';: Define a URL da rota GET que será testada. Neste caso, é uma rota de verificação de saúde em localhost na porta 3001.
-- **const response** = http.get(url);: Envia uma solicitação GET para a URL definida e armazena a resposta.
+- **const response = http.get(url);:** Envia uma solicitação GET para a URL definida e armazena a resposta.
 
 **5. Validação da resposta:**
 
