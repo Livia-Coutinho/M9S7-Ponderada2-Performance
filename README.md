@@ -5,9 +5,18 @@ O endpoint escolhido do meu projeto em grupo é acessado através do método GET
 
 ## Explicação do código de teste
 ![image](https://github.com/Livia-Coutinho/M9S7-Ponderada2-Performance/assets/99189965/183043b5-5d09-4b1c-a0e3-38e7cf0498f5)
--
--
------------
+</br>
+**1. Imports:**
+- **import http from 'k6/http';:** Importa o módulo HTTP do k6, que fornece funções para enviar solicitações HTTP durante o teste.
+- **import { check } from 'k6';:** Importa a função check do k6, que é usada para validar as respostas HTTP recebidas durante o teste.
+- **import { sleep } from 'k6';:** Importa a função sleep do k6, que é usada para adicionar atrasos entre as solicitações durante o teste.
+- </br>
+**2. Configuração de Opções:**
+- **options:** Define as opções de execução do teste, como o número de Virtual Users (VUs), a quantidade de iterações por VU e a duração total do teste. Neste caso, está configurado para simular 10 VUs, cada um realizando 100 iterações durante 10 segundos.
+</br>
+**3 . Função de teste:**
+- **export default function () { ... }:** Define a função principal do teste. Esta função será chamada repetidamente pelo k6 durante a execução do teste.
+</br>
 ## Interpretação dos resultados K6
 ![image](https://github.com/Livia-Coutinho/M9S7-Ponderada2-Performance/assets/99189965/688d6e45-7c4d-49d0-9def-f1790ca93b3b)
 </br>
