@@ -1,5 +1,18 @@
 # M9S7-Ponderada2-Performance
 
+## Introdução 
+Este relatório descreve o processo de avaliação de performance da aplicação M9S7-Ponderada2 utilizando a ferramenta k6. O objetivo desta avaliação é identificar possíveis gargalos na aplicação e analisar seu comportamento sob carga simulada.
+
+## Ferramenta utilizada (k6)
+O k6 é uma ferramenta de teste de carga de código aberto, usada para medir o desempenho de sistemas web e APIs. Ele permite simular um grande número de usuários virtuais realizando diferentes tipos de solicitações HTTP, enquanto monitora e registra métricas importantes de desempenho.
+
+## Procedimento
+O processo de avaliação da performance da aplicação M9S7-Ponderada2 foi realizado em etapas:
+
+- **Preparação do ambiente:** Garantir que o ambiente de teste esteja configurado corretamente, incluindo a inicialização do backend da aplicação e a configuração do k6.
+- **Criação do script de teste:** Desenvolver um script de teste utilizando o k6, que consiste em definir os cenários de teste, incluindo as solicitações HTTP a serem enviadas para a aplicação.
+- **Execução do teste:** Rodar o script de teste utilizando o k6 para simular a carga na aplicação e coletar métricas de desempenho.
+- **Análise dos resultados:** Analisar as métricas de desempenho coletadas durante o teste para identificar possíveis gargalos na aplicação e áreas de melhoria.
 
 ## Explicação do código de teste
 ![alt text](image-11.png)
@@ -50,12 +63,9 @@
 - **Iterations:** Mostra o número total de iterações completas do teste.
 - **VUs (Virtual Users):** Mostra o número atual de usuários virtuais simulados durante o teste.
 - **VUs max:** Indica o número máximo de usuários virtuais configurados para este teste.
-.
-.
 </br>
 </br>
 </br>
-
 # Passo a passo da atividade
 
 #### Rodar o backend - npx prisma generate
